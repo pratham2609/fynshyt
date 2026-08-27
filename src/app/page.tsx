@@ -4,19 +4,19 @@ import * as React from "react";
 import { Button } from "@/components/ui/button";
 
 const SURPRISES = [
-  { url: "https://www.youtube.com/watch?v=tS92P9PWNfU", weight: 1 },
-  { url: "https://www.youtube.com/watch?v=N3JFAHkxk1Y", weight: 1 },
-  { url: "https://www.youtube.com/watch?v=mQcZNhEYT0U", weight: 1 },
-  { url: "https://www.youtube.com/watch?v=Bu8bH2P37kY", weight: 1 },
-  { url: "https://www.youtube.com/watch?v=edpQzovSK6c", weight: 1 },
-  { url: "https://www.youtube.com/watch?v=ZiBF_U_iroA", weight: 1 },
-  { url: "https://www.youtube.com/shorts/ew7r0z-gZjo", weight: 1 },
+  { url: "https://www.youtube.com/watch?v=tS92P9PWNfU", weight: 0 },
+  { url: "https://www.youtube.com/watch?v=N3JFAHkxk1Y", weight: 0 },
+  { url: "https://www.youtube.com/watch?v=mQcZNhEYT0U", weight: 0 },
+  { url: "https://www.youtube.com/watch?v=Bu8bH2P37kY", weight: 0 },
+  { url: "https://www.youtube.com/watch?v=edpQzovSK6c", weight: 0 },
+  { url: "https://www.youtube.com/watch?v=ZiBF_U_iroA", weight: 0 },
+  { url: "https://www.youtube.com/shorts/ew7r0z-gZjo", weight: 0 },
   {
     url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1",
-    weight: 1,
+    weight: 0,
   },
-  /* This one should come up most often. */
-  { url: "https://www.youtube.com/watch?v=D-6yO7tMJxA", weight: 10 },
+  /* The active one. */
+  { url: "https://www.youtube.com/watch?v=D-6yO7tMJxA", weight: 1 },
 ];
 
 function randomSurprise() {
