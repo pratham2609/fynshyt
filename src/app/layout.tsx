@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   keywords: ["fynshyt", "brutalist", "surprise", "random"],
   openGraph: {
     title: "fynshyt",
-    description: "One white page. One orange brutalist button. Infinite surprises.",
+    description: "One yellow page. One orange brutalist button. Infinite surprises.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "fynshyt",
-    description: "One white page. One orange brutalist button. Infinite surprises.",
+    description: "One yellow page. One orange brutalist button. Infinite surprises.",
   },
 };
 
