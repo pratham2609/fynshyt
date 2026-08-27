@@ -1,0 +1,27 @@
+node_modules
+dist
+storybook-static
+.DS_Store
+.env
+.env.local
+coverage
+cypress/downloads
+.swc/
+.pnpm-store/
+node-jiti/
+v8-compile-cache*
+.idea/
+*.tsbuildinfo
+.eslintcache
+.prettiercache
+/.vscode
+TestResults/
+docker-compose.worktree.yml
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+
+# Next.js
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
