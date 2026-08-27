@@ -40,7 +40,7 @@ export default function Home() {
       <div className="flex flex-col items-center gap-8 text-center">
         <h1 className="text-6xl font-extrabold tracking-tight text-ink">fynshyt</h1>
         <p className="max-w-xs text-sm font-bold text-ink/70">
-          One white page. One orange button. Something random, every single time.
+          One yellow page. One orange button. Something random, every single time.
         </p>
         <Button variant="brutal" size="lg" onClick={surprise}>
           Surprise me
