@@ -64,7 +64,7 @@
   }
 
   body {
-    background: #ffffff;
+    background: #fde047;
     color: hsl(var(--ink));
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

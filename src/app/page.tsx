@@ -4,16 +4,29 @@ import * as React from "react";
 import { Button } from "@/components/ui/button";
 
 const SURPRISES = [
-  "https://youtube.com/shorts/Ew6beSaQ_3Y?si=HaBFb6k9WtHlKfbB",
-  "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1",
-  "https://youtube.com/shorts/aPMkRTHdLrE?si=MOnNNqKhf8x3bz3Y",
-  "https://youtu.be/D-6yO7tMJxA?si=Vp5FYAdpJhrAleBT",
-  "https://youtu.be/YHPhR89-x3g?si=SWbeIYWh7_QT5DAO",
-  "https://youtu.be/Bu8bH2P37kY?si=pciUDwGixcclg4ld",
+  { url: "https://www.youtube.com/watch?v=tS92P9PWNfU", weight: 1 },
+  { url: "https://www.youtube.com/watch?v=N3JFAHkxk1Y", weight: 1 },
+  { url: "https://www.youtube.com/watch?v=mQcZNhEYT0U", weight: 1 },
+  { url: "https://www.youtube.com/watch?v=Bu8bH2P37kY", weight: 1 },
+  { url: "https://www.youtube.com/watch?v=edpQzovSK6c", weight: 1 },
+  { url: "https://www.youtube.com/watch?v=ZiBF_U_iroA", weight: 1 },
+  { url: "https://www.youtube.com/shorts/ew7r0z-gZjo", weight: 1 },
+  {
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1",
+    weight: 1,
+  },
+  /* This one should come up most often. */
+  { url: "https://www.youtube.com/watch?v=D-6yO7tMJxA", weight: 10 },
 ];
 
 function randomSurprise() {
-  return SURPRISES[Math.floor(Math.random() * SURPRISES.length)];
+  const total = SURPRISES.reduce((sum, s) => sum + s.weight, 0);
+  let pick = Math.random() * total;
+  for (const s of SURPRISES) {
+    pick -= s.weight;
+    if (pick < 0) return s.url;
+  }
+  return SURPRISES[SURPRISES.length - 1].url;
 }
 
 export default function Home() {
@@ -23,7 +36,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-white px-6">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-yellow-300 px-6">
       <div className="flex flex-col items-center gap-8 text-center">
         <h1 className="text-6xl font-extrabold tracking-tight text-ink">fynshyt</h1>
         <p className="max-w-xs text-sm font-bold text-ink/70">
